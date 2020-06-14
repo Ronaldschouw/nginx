@@ -1,1 +1,22 @@
-Timezone Europe/Amsterdam
+# Laatste nginx container met TZ=Europe/AmsterdamA
+
+Voor gebruik met een proxy en letsencrypt
+
+docker-compose.yaml
+
+```
+service:
+  nginx:
+    image: ronaldschouw:nginx
+    container_name: nginx
+    expose:
+      - 443
+    volumes:
+      - ./html:/html:cached
+      - ./nginx/app.conf:/etc/nginx/conf.d/default.conf:cached
+    restart: always
+    environment:
+      - VIRTUAL_HOST=host
+      - LETSENCRYPT_HOST=host
+      - LETSENCRYPT_EMAIL=email@google.com
+
