@@ -1,4 +1,8 @@
-# Laatste nginx container met TZ=Europe/AmsterdamA
+# Laatste nginx versie
+
+### Bijzonderheden:
+
+TZ=Europe/Amsterdam
 
 Voor gebruik met een proxy en letsencrypt
 
