@@ -1,4 +1,5 @@
 FROM nginx:alpine
+MAINTAINER email@ronalt.nl
      
 ENV PS1="\u@\h:\w\\$ "
 
